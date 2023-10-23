@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados da Pesquisa</title>
+</head>
+<body>
+    <h1>Resultados da Pesquisa</h1>
+        
+    <div id="resultados">
+        <ul style=" list-style-type: none;">
+            {% for post in posts %}
+                <li>
+                    <a class="btn btn-primary" href="{% url 'post-detail' post.id %}">{{ post.title }}</a>
+                </li>
+            {% empty %}
+                <li>Nenhum resultado encontrado.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

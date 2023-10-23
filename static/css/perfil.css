@@ -1,0 +1,18 @@
+.foto-perfil {
+    height: 200px;
+    border-radius: 100%;
+}
+
+.registre-perfil {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+}
+
+.visivel {
+    display: block;
+}

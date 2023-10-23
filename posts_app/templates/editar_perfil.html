@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar Perfil{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<body>
+  <link rel="stylesheet" href="{% static 'css/editar-perfil.css' %}">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-6 coluna-esquerda">
+        <!-- Exibir informações atuais do perfil -->
+        <div class="info-perfil">
+          <h1 class="nome-perfil">{{ perfil.nome }}</h1>
+          <img class="foto-perfil" src="{{ perfil.image.url }}" alt="Foto de perfil">
+          <div class="bio">
+            {{ perfil.bio }}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 col-lg-6 coluna-direita">
+        <h2>Editar Perfil</h2>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+
+          <!-- Campo para editar o nome -->
+          <div class="form-group">
+            <label for="id_nome">Nome:</label>
+            <input type="text" name="nome" id="id_nome" value="{{ perfil.nome }}" class="form-control">
+          </div>
+
+          <!-- Campo para editar a bio -->
+          <div class="form-group">
+            <label for="id_bio">Bio:</label>
+            <textarea name="bio" id="id_bio" class="form-control">{{ perfil.bio }}</textarea>
+          </div>
+
+          <!-- Campo para editar a imagem (opcional) -->
+          <div class="form-group">
+            <label for="id_imagem">Imagem:</label>
+            <input type="file" name="image" id="id_imagem" accept="image/*">
+          </div>
+
+          <button id="salvar-alt" type="submit" class="btn btn-primary">Salvar Alterações</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

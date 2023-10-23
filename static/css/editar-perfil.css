@@ -1,0 +1,66 @@
+
+body{
+    background-color: #18212C;
+    color: rgb(255, 255, 255);
+}
+.coluna-esquerda {
+    
+    float: left;
+    width: 40%; 
+    margin-right: 5%; 
+}
+
+.coluna-direita {
+    margin-top: 50px;
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
+    background-color: #181920;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    height: 400px;
+    float: left;
+    width: 500px; 
+}
+.bio{
+    padding: 5px;
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 400px;
+    height: 100px;
+    color: black;
+    background-color: white;
+}
+
+.clear {
+    clear: both;
+}
+.foto-perfil{
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
+    margin-left: 100px;
+    width: 250px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.nome-perfil{
+    margin-left: 170px;
+    
+}
+#salvar-alt{
+    margin-top: 25px;
+}
+label{
+    margin-top: 20px;
+}
+.form-control{
+    color: black;
+    background-color: rgb(165, 166, 170);
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+    height: 45px;
+}
+#salvar-alt{
+    border: none;
+    color: white;
+    background-color: blue;
+}

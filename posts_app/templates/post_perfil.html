@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Perfil{% endblock %}
+
+{% block content %}
+{% load static %}
+<body>
+    
+    <link rel="stylesheet" href="{% static 'css/meu-perfil.css' %}">
+    <script src="{% static 'js/perfil.js' %}"></script>
+    
+    <div class="container">
+        <div class="row">
+            <div class="info-perfil col-lg-6 col-md-12">
+                <div class="nm-ft">
+                    <h1 class="nome-perfil">{{ nome }}</h1>
+                    <img class="foto-perfil" src="{{ image_url }}" alt="Foto de perfil">
+                </div>
+            </div>
+    
+            <div class="org col-lg-6 col-md-12">
+                <div class="botoes">
+                    <a href="{% url 'editar-perfil' %}" class="btn btn-primary">Editar Perfil</a>
+                    <a href="{% url 'user-logout' %}" class="btn btn-danger">Sair</a>
+                </div>
+                <div class="bio">
+                    <p>Biografia</p>
+                    {{ bio }}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+
+{% endblock content %}

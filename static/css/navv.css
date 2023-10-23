@@ -1,0 +1,74 @@
+
+.mostrar {
+    display: none;
+    border: 2px solid black;
+    justify-content: center;
+    text-align: center;
+    background-color: #181920;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 58px;
+    right: 50px;
+}
+.registrar{
+    margin-top: 8px;
+    border: 2px solid black;
+    height: 30px;
+}
+
+.me-5{
+    display: none;
+    padding: 5px;
+    text-align: center;
+    width: 90px;
+
+}
+.princi{
+    position: absolute;
+    top: 12px;
+    padding: 5px;
+    right: 20px;
+    width: 200px;
+
+}
+.princi-reg{
+    color: white;
+    text-decoration: none;
+}
+.princi-login{
+    color: white;
+    text-decoration: none;
+    padding-right: 5px;
+    margin-right: 10px;
+}
+.perfil{
+    text-decoration: none;
+}
+#navbar{
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #181920;
+}
+.custom-text-color {
+    color: white;
+}
+.custom-text-color:hover{
+    color: yellow;
+}
+
+.mostrar a {
+    text-decoration: none; 
+    color: white; 
+  }
+.mostrar a:hover{
+    color: yellow;
+}
+.princi a:hover{
+    color: yellow;
+}
+.editar{
+    margin-top: 10px;
+}
+.logout{
+    margin-top: 10px;
+}

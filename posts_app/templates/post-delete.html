@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/delete.css' %}">
+{% block title %}Deletar Postagem{% endblock %}
+{% block content %}
+
+<div class="deletar-post">
+    <form method="post">
+        {% csrf_token %}
+        <p>Deseja deletar esse Post?</p>
+        <button class="btn btn-danger" type="submit">Deletar</button>
+        <a href="javascript:history.back()"><button class="btn btn-primary" type="button">Voltar</button></a>
+    </form>
+</div>
+
+{% endblock content %}

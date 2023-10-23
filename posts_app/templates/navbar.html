@@ -1,0 +1,55 @@
+{% load static %}
+<script src="{% static 'js/navbar.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/navv.css' %}">
+
+
+<nav id="navbar" class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand custom-text-color" href="{% url 'post-list' %}">Blog em Django</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link custom-text-color" aria-current="page" href="{% url 'post-list' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-text-color" href="{% url 'post-create' %}">Criar um Post</a>
+          </li>
+          
+        </ul>
+       
+      </div>
+    </div>
+    
+    </div>
+    <div class="me-5">
+      <a class="perfil "  href="{% url 'post-perfil'%}">
+        <span class="custom-text-color">perfil</span>
+      </a>
+
+  </nav>
+
+<div class="princi">
+          <a class="princi-login" href="{% url 'user-login'%}">
+            Entrar
+          </a>
+          <a class="princi-reg" href="{% url 'registra-perfil'%}">
+            Registrar
+          </a>
+      </button>
+    </div>
+
+
+
+  <div class="mostrar">
+    <div class="editar"><a href="{% url 'editar-perfil' %}">Editar</a></div>
+    <div class="logout"><a href="{% url 'user-logout' %}">Logout</a></div>
+
+  </div>
+
+
+
+
+  

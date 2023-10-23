@@ -1,0 +1,54 @@
+/* tela de login */
+body {
+    background-color: #1E212C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.csslogin {
+    color: white;
+    height: 320px;
+    width: 350px;
+    text-align: center;
+    background-color: #181920;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+label, input {
+    
+    margin: 10px 0;
+}
+input{
+    border-radius: 8px;
+    height: 40px;
+    color: white;
+    background-color: rgb(165, 166, 170);
+}
+button{
+    color: white;
+    border-radius: 8px;
+    height: 40px;
+    background-color: blue;
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+}
+label{
+    font-size: 20px;
+}
+img{
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
+    height: 360px;
+    width: 450px;
+}

@@ -1,0 +1,79 @@
+
+    
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block title %}Lista Postagens{% endblock %}
+    
+    {% block content %}
+    
+<body>
+    
+        <h1 class="mb-3">Todos os Posts</h1>
+        <link rel="stylesheet" href="{% static 'css/list-post.css' %}">
+        <form class="barra-pesquisa" method="get" action="">
+            <input class="input-pesquisa" type="text" name="termo" placeholder="Pesquisar...">
+            <button id="button-pesquisa" type="submit" class="btn btn-primary"><ion-icon class="icon-pesquisa" name="search"></ion-icon></button>
+        </form>
+    
+        <div id="resultados">
+    
+        </div>
+    <div class="espaco">
+    </div>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for post in posts %}
+        <div class="col">
+            <a href="{% url 'post-detail' post.id %}" class="card-link no-underline">
+                <div class="card h-100 card-shadow">
+                    <img src="{{post.image.url}}" class="card-img-top" alt="{{post.title}}">
+                    <div class="card-body">
+                        <p id="text-card" class="card-text card-text">{{post.title}}</p>
+                        <p id="description-card" class="no-underline">{{ post.description }}</p>
+                    </div>
+                    <div class="fim-card">
+                        <p class="card-date" class="no-underline">{{ post.data_publicacao|date:"d/m/Y" }} -</p>
+                        {% if post.comments.all %}
+                            <p>Ver comentário</p>
+                        {% else %}
+                            <p>Nenhum comentário ainda.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+        </div>
+        <div class="espaco">
+        </div>
+</body>
+        
+        <footer>
+            <div class="redes">
+                <a class="whats redes-icones" href="">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+                <a class="git redes-icones" href="https://github.com/Arthur123145">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a class="linkedin redes-icones" href="https://www.linkedin.com/in/arthur-gomes-945373283/">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+            <div class="copy">&copy;<p> Arthur Gomes</p></div>
+            <div class="contatos">
+
+                <p class="telefone"><ion-icon class="icon-telefone" name="call"></ion-icon>(55) 00 00000 0000</p>
+
+                <p class="email"><ion-icon class="icon-email" name="mail"></ion-icon>info@gmail.com</p>
+            </div>
+
+        </footer>
+
+
+    {% endblock content %}
+
+
+
+
+    

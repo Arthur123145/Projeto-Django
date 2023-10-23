@@ -1,0 +1,57 @@
+body{
+    background-color: #18212C;
+}
+.info-perfil{
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    height: 400px;
+}
+.nome-perfil{
+
+
+}
+.foto-perfil {
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
+    height: 300px;
+    border-radius: 50%;
+
+}
+.bio{
+
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    float: left;
+    width: 400px;
+    height: 250px;
+    margin-top: 30px;
+    margin-right: 50px;
+
+}
+.bio p{
+    font-size: 20px;
+    margin-left: 140px;
+}
+
+
+.visivel {
+    display: block;
+}
+.btn-editar, .icone {
+    float: left; 
+}
+
+.clear {
+    clear: both; 
+}
+.nm-ft{
+    align-items: center;
+    text-align: center;
+ 
+}
+
+.botoes{
+    margin-top: 50px;
+}

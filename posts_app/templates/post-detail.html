@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalhes Postagem{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/detalhes.css' %}">
+<script src="{% static 'js/detail.js' %}"></script>
+
+
+<body>
+    <div class="botao">
+        <a id="atualizar" class="btn btn-warning d-none d-md-block" href="{% url 'post-update' post.id %}">Atualizar</a>
+        <a id="deletar" class="btn btn-danger d-none d-md-block" href="{% url 'post-delete' post.id %}">Delete</a>
+    </div>
+    
+    
+    
+            <!-- Exiba os detalhes do post -->
+    <h1>{{ post.title }}</h1>
+    
+    <div class="container row no-gutters">
+        <img class="dpost col-lg-12 col-md-6" src="{{ post.image.url }}" alt="{{ post.title }}" />
+        
+        <div class="icon ">
+            <ion-icon id="icone-curtir" class="icone-curtir" name="heart"></ion-icon>
+            <ion-icon id="icone-comentar" class="icone-comentar" name="chatbubble-outline"></ion-icon>
+        </div>
+    
+        <p class="descricao-post">{{ post.description }}</p>
+    </div>
+    
+    <form class="comentario" method="post" action="{% url 'post-detail' id=post.id %}">
+        {% csrf_token %}
+        {{ comment_form.as_p }}
+        <button id="add-coment" type="submit" class="btn btn-primary">Adicionar Comentário</button>
+    </form>
+    
+    
+    <h2>Comentários</h2>
+    <div class="comment-container">
+        {% for comment in post.comment_set.all %}
+            <div class="comment">
+                <div class="comment-text">
+                    <p>{{ comment.text }}</p>
+                </div>
+                <div class="comment-author">
+                    <small>Comentado por: {{ comment.author.username }}</small>
+                </div>
+                {% if user == comment.author %}
+                    <div class="delete-coment"><a class="" href="{% url 'delete-comment' comment.id %}">X</a></div>
+                {% endif %}
+            </div>
+    
+        {% empty %}
+            <p>Nenhum comentário ainda.</p>
+        {% endfor %}
+    </div>
+</body>
+                
+{% endblock content %}

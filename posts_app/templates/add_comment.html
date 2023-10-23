@@ -1,0 +1,15 @@
+<form method="post" action="{% url 'add-comment' post_id=post.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Adicionar Comentário</button>
+</form>
+
+<!-- Exiba os comentários existentes -->
+{% for comment in post.comment_set.all %}
+    <div class="comment">
+        <p>{{ comment.text }}</p>
+        <small>Comentado por: {{ comment.author.username }}</small>
+    </div>
+{% empty %}
+    <p>Nenhum comentário ainda.</p>
+{% endfor %}

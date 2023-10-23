@@ -1,0 +1,56 @@
+
+.registration-form {
+    position: absolute;
+    height: 75%;
+    width: 70%;
+    background-color: red;
+    text-align: justify;
+    display: flex;
+}
+
+.left-column,
+
+
+.left-column {
+    border-right: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+/* Estilo para os rótulos */
+
+/* Estilo para os campos de entrada */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para o botão de registro */
+.register-button {
+
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+form{
+    border-radius: 20px;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.registrar{
+    margin-bottom: 20px;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    height: 40px;
+    background-color: blue;
+    text-transform: uppercase;
+}
